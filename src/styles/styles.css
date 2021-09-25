@@ -1,4 +1,5 @@
 @import "https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css";
+@import "./fonts.css";
 
 * {
   box-sizing: border-box;
@@ -12,15 +13,18 @@ input {
 
 body {
   background-color: black;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: 'Noto Sans CJK KR',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
-  color: white;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
 }
 
 button {
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 
 a {
@@ -107,11 +111,11 @@ form {
   flex-grow: 1;
   height: 40px;
   padding: 0px 20px;
-  color: white;
   border: 1px solid #04aaff;
   border-radius: 20px;
   font-weight: 500;
   font-size: 12px;
+  color: white;
 }
 
 .factoryInput__arrow {
@@ -178,6 +182,7 @@ form {
   display: flex;
   flex-direction: column;
   color: rgba(0, 0, 0, 0.8);
+  border: black solid 1px;
 }
 
 .nweet h4 {
@@ -185,12 +190,7 @@ form {
 }
 
 .nweet img {
-  right: -10px;
-  top: 20px;
-  position: absolute;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+
   margin-top: 10px;
 }
 
@@ -273,4 +273,43 @@ form {
   display: block;
   font-size: 12px;
   text-decoration: underline;
+}
+
+.order{
+  background-color: transparent;
+  border:transparent;
+  color: white;
+  text-align: right;
+  font-family: 'Noto Sans CJK KR',-apple-system, BlinkMacSystemFont, 
+  "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", 
+  "Helvetica Neue", sans-serif;
+}
+.order:after{
+  content: '\2193';
+}
+
+.transBack{
+  background-color: transparent;
+  border:transparent;
+}
+
+.palatte{
+  width:35px;
+  height:35px;
+  border-radius: 50%;
+  border: white 1px;
+  margin: 5px;
+}
+
+.color1{
+  background: linear-gradient(90deg, #ffffff 50%, #04AAFF 50% );
+}
+.color2{
+  background: linear-gradient(90deg, #FCD1D1 50%, #6FB081 50% );
+}
+.color3{
+  background: linear-gradient(90deg, #000000 50%, #892CDC 50% );
+}
+.color4{
+  background: linear-gradient(90deg, #000000 50%, #04AAFF 50% );
 }

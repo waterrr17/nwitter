@@ -32,7 +32,7 @@ const Nweet = ( { nweetObj, isOwner }) => {
     };
 
     return (
-        <div className="nweet">
+        <div className="nweet colorBor color">
             {editing? (
                 <>
                 <form onSubmit={onSubmit} className="container nweetEdit">
@@ -46,10 +46,10 @@ const Nweet = ( { nweetObj, isOwner }) => {
                 </>
             ) : (
                 <>
-                 <h4>{nweetObj.text}</h4>
                  {nweetObj.attachmentUrl && (
-                     <img src={nweetObj.attachmentUrl} width="50px" height="50px" />
+                     <img src={nweetObj.attachmentUrl} width="200px" height="100px" />
                  )}
+                 <h4 style={{marginTop: 10}}>{nweetObj.text}</h4>
                 {isOwner && (
                     <div className="nweet__actions">
                         <span onClick={onDeleteClick}>

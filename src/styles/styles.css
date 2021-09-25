@@ -313,3 +313,7 @@ form {
 .color4{
   background: linear-gradient(90deg, #000000 50%, #04AAFF 50% );
 }
+
+.date{
+  font-weight: bold;
+}

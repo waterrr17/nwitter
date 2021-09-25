@@ -2,8 +2,9 @@ import { dbService, storageService } from "fbase";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import SimpleDateTime from "react-simple-timestamp-to-date";
 
-const Nweet = ( { nweetObj, isOwner }) => {
+const Nweet = ( { nweetObj, isOwner, userObj }) => {
     const [editing, setEditing] = useState(false);
     const [newNweet, setNewNweet] = useState(nweetObj.text);
 
@@ -46,8 +47,15 @@ const Nweet = ( { nweetObj, isOwner }) => {
                 </>
             ) : (
                 <>
+                <span className="user color">
+                    User: {(nweetObj.creatorId).substr(0,3)}
+                </span>
+                <span className="date">
+                    <SimpleDateTime dateSeparator="/" timeSeparator=":" format="YMD" meridians="1">
+                        {nweetObj.createdAt/1000}</SimpleDateTime>
+                </span>
                  {nweetObj.attachmentUrl && (
-                     <img src={nweetObj.attachmentUrl} width="200px" height="100px" />
+                     <img src={nweetObj.attachmentUrl} width="200px" height="auto" />
                  )}
                  <h4 style={{marginTop: 10}}>{nweetObj.text}</h4>
                 {isOwner && (
